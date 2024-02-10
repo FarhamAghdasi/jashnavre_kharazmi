@@ -1,0 +1,1624 @@
+@charset "UTF-8";
+/*=============================================================
+    CSS INDEX
+    author : Farham Aghdasi
+    author url : www.farhamaghdasi.ir
+    =============================
+    01. GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. START BOOTSTRAP NAVIGATION OVERRIDES
+    03. START BOTTOM HERO STYLE
+    04. START ABOUT CSS STYLE
+    06. START WHY SECTION DESIGN
+    07. START Test Page
+    08. START FOOTER DESIGN
+    09. START SECTION TOP DESIGN
+    10. START FAQ DESIGN
+    11. START LOGIN AND REGISTER PAGE DESIGN
+    12. START Check-New Section CSS
+  =============================================================*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+body {
+    color: #888;
+    font-family: "vazirmatn", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    overflow-x: hidden;
+    direction: rtl;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-family: "vazirmatn", sans-serif;
+    color: #1a2d62;
+    font-weight: 400;
+}
+
+a {
+    font-family: "vazirmatn", sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+a:hover {
+    color: #2eca7f;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+inout {
+    outline: none;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+span {
+    font-family: "vazirmatn", sans-serif;
+}
+
+.no-padding {
+    padding: 0
+}
+
+
+/*END PRELOADER DESIGN*/
+
+.section-padding {
+    padding: 80px 0
+}
+
+
+/*START SECTION TITLE DESIGN*/
+
+.section-title {
+    margin-bottom: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: #2eca7f;
+}
+
+
+.section-title p {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 800;
+    text-transform: capitalize;
+    line-height: 46px;
+    color: #1a2d62;
+}
+
+.section-padding-no {
+    padding: 0px !important;
+    padding-bottom: 10px !important;
+}
+
+@media only screen and (max-width:480px) {
+    .section-title p {
+        width: 100%;
+    }
+}
+
+.no-d {
+    color: #2eca7f;
+}
+
+.section-title p span {
+    color: #2eca7f;
+}
+
+h1.section-title-white {
+    color: #fff;
+}
+
+p.section-title-white {
+    color: #fff;
+}
+
+
+
+/*END SECTION TITLE DESIGN*/
+
+
+/*START SCROLL TO TOP*/
+
+.topcontrol {
+    background: #2eca7f;
+    border-radius: 30px;
+    bottom: 5px;
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    height: 50px;
+    line-height: 47px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    position: fixed;
+    left: 5px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    width: 50px;
+}
+
+@media only screen and (max-width:768px) {
+    .topcontrol {
+        display: none;
+    }
+}
+
+.topcontrol:hover {
+    background: #2eca7f;
+    color: #fff;
+}
+
+
+/*END SCROLL TO TOP*/
+
+
+/*START PRELOADER DESIGN*/
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    right: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px -75px 0 0;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fb8e49;
+    -webkit-animation: spin 1.7s linear infinite;
+    animation: spin 1.7s linear infinite;
+    z-index: 11;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #68bb3e;
+    -webkit-animation: spin-reverse 0.6s linear infinite;
+    animation: spin-reverse 0.6s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #5138a2;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes spin-reverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+}
+
+#loader-wrapper .loader-section.section-left {
+    right: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    left: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.3s 1s ease-out;
+    transition: all 0.3s 1s ease-out;
+}
+
+
+/*END LOADER*/
+
+::-moz-selection {
+    background: #1a2d62;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #1a2d62;
+    color: #fff;
+    text-shadow: none;
+}
+
+
+/*BTN START*/
+
+.btn_one {
+    background: #2eca7f;
+    font-size: 15px;
+    padding: 10px 30px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 100px;
+    font-weight: 700;
+    box-shadow: -10px 15px 18px rgba(23, 23, 36, 0.1);
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.btn_one:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #1a2d62;
+    border-radius: 100px;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.btn_one:hover,
+.btn_one:focus,
+.btn_one:active {
+    color: #fff;
+    border-radius: 100px;
+}
+
+.btn_one:hover:before,
+.btn_one:focus:before,
+.btn_one:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    border-radius: 100px;
+}
+
+@media only screen and (max-width:880px) {
+    .btn_one {
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .password-field i {
+        padding-bottom: 7% !important;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .btn_one {
+        padding: 10px 30px;
+    }
+    .password-field i {
+        padding-bottom: 10% !important;
+    }
+}
+
+
+/*BTN END*/
+
+
+/*START BTN TWO*/
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 18px 22px;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(46, 202, 127, 0.2);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-size: 15px;
+    color: #1a2d62;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+	transform: rotateY(180deg);
+}
+
+.cta:active {
+    transform: scale(-0.96);
+}
+
+
+.cta:hover svg {
+    transform: rotateY(0deg);
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-width: 2;
+    transform: scale(-0.96);
+}
+
+
+/*END BTN TWO*/
+
+
+/*START BTN THREE*/
+
+.btn_two {
+    color: #1a2d62;
+    border: 1px solid #ededed;
+    padding: 9px 30px;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn_two:hover {
+    color: #fff;
+    border: 1px solid #2eca7f;
+    background: #2eca7f;
+}
+
+
+/*END BTN THREE*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.START BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+
+.site-logo img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.bg-faded {
+    background-color: #fff;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+
+.navbar-fixed {
+    z-index: 999;
+    position: fixed;
+    opacity: .98;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    -webkit-animation: fadeInDown 800ms;
+    animation: fadeInDown 800ms;
+    -webkit-backface-visibility: hidden;
+    border-radius: 0px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
+}
+
+#navigation {
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+#navigation.navbar-fixed {
+    padding: 10px 0;
+    background: #fff;
+    border-color: #fff;
+}
+
+.header_right {
+    display: block;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+#main-menu {}
+
+#main-menu ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#main-menu ul li {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+}
+
+#main-menu ul li a {
+    color: #1a2d62;
+    font-weight: 700;
+    text-transform: capitalize;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    font-size: 15px;
+    padding: 24px 0 26px;
+    display: block;
+}
+
+#main-menu ul li a span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 880px) {
+    #main-menu ul li a span {
+        display: none;
+    }
+}
+
+#navigation.navbar-fixed #main-menu ul li a {
+    color: #1a2d62;
+    padding: 22px 0 22px;
+}
+
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus,
+#main-menu ul li a:hover,
+#main-menu ul li a:focus {
+    color: #2eca7f;
+}
+
+#main-menu ul li>a:hover,
+#main-menu ul li>a:focus {
+    color: #2eca7f;
+}
+
+#navigation #main-menu ul li a:hover,
+#navigation #main-menu ul li a:focus,
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus {}
+
+#navigation.navbar-fixed #main-menu ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li a:focus {
+    color: #2eca7f;
+}
+
+.slicknav_menu {
+    font-size: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0px;
+}
+
+.slicknav_nav_icon {
+    color: #6138bd;
+    font-size: 24px;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+
+/* Responsive Design */
+
+@media only screen and (max-width:1024px) {
+    #main-menu ul li {
+        margin-right: 30px;
+    }
+}
+
+
+/*END 1024px*/
+
+@media only screen and (max-width: 991px) {
+    #main-menu ul li {
+        margin-right: 9px;
+    }
+    #main-menu ul li a {
+        font-size: 15px;
+    }
+    #navigation {
+        padding: 10px 0 20px;
+        background: #fff;
+    }
+}
+
+
+/*END 991px*/
+
+@media only screen and (max-width: 880px) {
+    #main-menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+        width: 100%;
+    }
+    .slicknav_nav {
+        background-color: #fff;
+    }
+    #navigation #mobile_menu li a {
+        color: #1a2d62;
+        font-weight: 500;
+    }
+    #navigation.navbar-fixed #mobile_menu li a {
+        color: #1a2d62;
+    }
+    .slicknav_nav a {
+        padding: 5px 0px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+    #navigation #mobile_menu li a:hover,
+    #navigation #mobile_menu li a:focus {
+        color: #1a2d62;
+        background: #fff;
+    }
+    .slicknav_btn {
+        top: 24px;
+        background: #1a2d62;
+    }
+}
+
+
+/*END 767px*/
+
+.slicknav_nav .slicknav_arrow {
+    font-size: 0.8em;
+    margin: 0 0.4em 0 0;
+    display: none;
+}
+
+@media only screen and (max-width: 575px) {
+    .slicknav_btn {
+        margin: 0;
+        text-decoration: none;
+        position: absolute;
+        top: 35px;
+        left: 17px;
+    }
+}
+
+
+/*END 575px*/
+
+.password-field {
+    position: relative;
+}
+
+.password-field i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding-bottom: 5%;
+}
+
+/* Hide password by default */
+#login-password[type="password"] + .fa-eye::after,
+#register-password[type="password"] + .fa-eye::after,
+#confirm-password[type="password"] + .fa-eye::after {
+    content: '\f070';
+    font-family: FontAwesome;
+    cursor: pointer; /* Add cursor pointer for better usability */
+}
+
+/* Show password when toggled */
+#login-password[type="text"] + .fa-eye::after,
+#register-password[type="text"] + .fa-eye::after,
+#confirm-password[type="text"] + .fa-eye::after {
+    content: '\f06e';
+    font-family: FontAwesome;
+    cursor: pointer; /* Add cursor pointer for better usability */
+}
+
+
+.fa-eye:before {
+    content: none !important;
+} 
+
+
+
+/*-------------------------------
+# Dropdwon menu 
+--------------------------------*/
+
+#navigation #main-menu ul li ul,
+#navigation #main-menu ul li ul li ul {
+    background: #fff;
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05);
+    right: -55px;
+    list-style: outside none none;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    padding: 10px;
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    visibility: hidden;
+    width: 200px;
+    z-index: 999;
+    border-radius: 4px;
+    border-top: 2px solid #2eca7f;
+}
+
+#navigation #main-menu ul li ul li {
+    position: relative;
+}
+
+#navigation #main-menu ul li ul li ul {
+    top: 0;
+    left: auto;
+    right: 205px;
+}
+
+#navigation.navbar-fixed #main-menu ul li li a {
+    color: #1a2d62;
+}
+
+#navigation #main-menu ul li:hover ul,
+#navigation #main-menu ul li ul li:hover>ul {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+}
+
+#navigation #main-menu ul li ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation.navbar-fixed #main-menu ul li ul li a,
+#navigation #main-menu ul li ul li a {
+    color: #1a2d62;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 7px 12px;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s !important;
+    -o-transition: all 0.3s ease 0s !important;
+    transition: all 0.3s ease 0s !important;
+    visibility: inherit !important;
+    opacity: inherit !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=NaN)";
+}
+
+#navigation #main-menu ul li ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li ul li a:hover,
+#navigation.navbar-fixed #main-menu ul li ul li a:focus {
+    color: #2eca7f;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+
+.call_to_action {
+    float: right;
+    margin-top: 10px;
+}
+
+.call_to_action a {
+    margin-left: 5px;
+}
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+
+
+@media only screen and (max-width:480px) {
+    #kenburns_061 {
+        margin-top: 75px;
+    }
+}
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. START BOTTOM HERO STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.tp_feature {
+    padding-bottom: 50px;
+}
+.ps_indicators_txt_icon {
+	cursor: default;
+}
+.single_tp {
+    padding: 60px;
+    margin-bottom: 30px;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.1);
+    border-left: 1px solid #ededed;
+	cursor: not-allowed;
+}
+
+@media only screen and (max-width:880px) {
+    .single_tp {
+        margin-bottom: 0px;
+    }
+}
+
+.single_tp h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.single_tp p {
+    margin-bottom: 40px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. END BOTTOM HERO STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04. START ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.ab_one {
+    padding-bottom: 50px;
+}
+
+.ab_content {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.ab_content h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: 54px;
+    font-size: 44px;
+}
+
+.ab_content h2 span {
+    color: #2eca7f;
+}
+
+.ab_content h2 u {
+    color: #2eca7f;
+}
+
+.ab_content p {
+    margin-bottom: 30px;
+}
+
+.ab_content p {
+    margin-bottom: 30px;
+}
+
+.abmv {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.abmv:hover {
+    border-right: 4px solid #2eca7f;
+}
+
+.abmv span {
+    background: rgba(46, 202, 127, 0.2);
+    float: right;
+    margin-left: 20px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    color: #2eca7f;
+    line-height: 70px;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 100px;
+}
+
+.abmv h4 {
+    font-weight: 800;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.abmv p {
+    overflow: hidden;
+}
+
+.ab_img {
+    position: relative;
+}
+
+.ab_img img {
+    padding-left: 40px;
+}
+
+@media only screen and (max-width:880px) {
+    .ab_img img {
+        padding-left: 0px;
+        width: 100%;
+    }
+    .ab_img {
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 05. END ABOUT CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06. START WHY SECTION DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.why_section {
+    background: url(../images/banner/section-bg-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07. START Test Page
+* ----------------------------------------------------------------------------------------
+*/
+
+/* به این دلیل که در کتابخانه ، تمامی تصاویر به canvas تبدیل شده اند ، موقع استایل دهی هم همین اتفاق می افتد */
+.arti_img_two canvas {
+    width: 50%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+}
+
+
+/* Table */
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  /* TextArea For Test page */
+
+  .container-textpage {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .arti_single > h2 {
+      text-align: center;
+      margin-bottom: 15px;
+  }
+  
+  .button-textpage {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .button-textpage:hover {
+    background-color: #93c5f1;
+  }
+
+  .iframe-container {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+  /* #overlay {
+    width:100%;
+    height:100%;
+    z-index: 1;
+    cursor: not-allowed;
+} */
+
+#audioPlayer {
+    width: 300px;
+    height: 50px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .input-field {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+  #audioPlayer::-webkit-media-controls-panel {
+    background-color: transparent;
+    border: none;
+  }
+  
+  #audioPlayer::-webkit-media-controls-play-button {
+    color: #333;
+  }
+  
+  #audioPlayer::-webkit-media-controls-volume-slider {
+    display: none;
+  }
+
+  #overlay, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+
+
+.arti_content > p {
+    text-align: center;
+}
+
+.arti_sp h2 {
+    margin-top: 30px;
+    font-weight: 700;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.arti_sp canvas {
+    margin-bottom: 30px;
+    width: 50%;
+    margin-right: 25%;
+}
+
+.arti_sp p {
+    text-align: center;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07. END Test Page
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08. START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.footer {
+    background: #1a2d62;
+    padding-bottom: 40px;
+}
+
+.fc {
+    margin-top: 60px;
+    /* background: #2b2a5e; */
+    padding-top: 40px;
+    border-top: 1px solid #243c80;
+}
+
+.footer_copyright {
+    float: right;
+}
+
+@media only screen and (max-width:480px) {
+    .footer_copyright {
+        display: inline;
+    }
+}
+
+.footer_copyright p {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08. END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09. START SECTION TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.section-top {
+    padding-top: 200px;
+    position: relative;
+    background: url(../images/banner/section-top.png);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 120px;
+}
+
+.section-top-title {
+    position: relative;
+}
+
+@media only screen and (max-width:480px) {
+    .section-top-title {
+        width: 100%
+    }
+}
+
+.section-top-title h1 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.section-top-title ul {
+    background: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    width: 220px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.section-top-title ul li {
+    color: #1a2d62 !important;
+    display: inline-block;
+}
+
+.section-top-title ul li a {
+    color: #2eca7f!important;
+    font-weight: 600;
+}
+
+.section-top-title ul li a:hover {
+    color: #1a2d62!important
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09. END SECTION TOP DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/* ----------------------------------------------------------------------------------------
+* 10. START FAQ DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.faq_area {
+    padding-bottom: 40px;
+}
+
+.accordion {
+    margin-bottom: 60px;
+}
+
+.accordion-item {
+    border: 1px solid #ededed;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.06);
+    box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.06);
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.accordion-item:not(:first-of-type) {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-header {
+    background: #fff !important;
+    padding: 7px 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.accordion-button {
+    background: none!important;
+    color: #1a2d62 !important;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #1a2d62!important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.pt_faq {
+    padding-right: 50px;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+* 10. END FAQ DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11. START LOGIN AND REGISTER PAGE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.login_register {
+    background: rgba(199, 201, 209, .09);
+}
+
+.login_register_title {
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 899;
+}
+
+.login {
+    background: #fff none repeat scroll 100% 0;
+    -webkit-box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #d3ced2;
+    border-radius: 15px;
+}
+
+.success-message {
+    margin-left: 1px;
+    color: #189a18;
+    font: 18px;
+    display: none;
+}
+
+.error-message {
+    color: #FF0000;
+    display: none;
+    margin-top: 15px;
+}
+
+
+.login input {
+    margin-bottom: 30px;
+    background: #f4f4f4;
+    height: 50px;
+}
+
+.login input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.register {
+    background: #fff none repeat scroll 100% 0;
+    -webkit-box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #d3ced2;
+}
+
+.register input {
+    margin-bottom: 30px;
+    background: #f4f4f4;
+    height: 50px;
+}
+ #submit-btn {
+     background: #2eca7f !important;
+     box-shadow: -10px 15px 18px rgb(23 23 36 / 10%) !important;
+ }
+
+ .error {
+     color: red;
+ }
+
+.register input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.login label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.register label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.login input, #loginBtn ,
+.register input , .submit-btn {
+    border: none;
+    width: 100%;
+}
+
+.login p,
+.register p {
+    color: #232434;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login p a,
+.register p a , .submit-btn {
+    color: #2eca7f;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 11. END LOGIN AND REGISTER PAGE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+/* New Styles */
+
+.subs_form {
+	text-align: center;
+}
+
+.subs_form h1 { 
+	margin-bottom: 10px;
+	font-weight: 900;
+}
+
+.subs_form h3 {
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12. START Check-New Section CSS
+* ----------------------------------------------------------------------------------------
+*/
+
+.testsource {
+    background: rgba(199, 201, 209, .09);
+    padding-bottom: 30px;
+}
+
+.single_ins {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 40px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.single_ins_content {
+    float: right;
+    width: 50%;
+}
+
+@media only screen and (max-width:480px) {
+    .single_ins_content {
+        float: right;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.single_ins_content h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2eca7f;
+    text-transform: capitalize;
+}
+
+.single_ins_content h1 {
+    font-weight: 700;
+	font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.single_ins_content p {
+    margin-bottom: 40px;
+}
+
+
+.single_ins_img img {
+    width: 50%;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12. END Check-New Section CSS
+* ----------------------------------------------------------------------------------------
+*/
