@@ -159,7 +159,7 @@ function ajaxLogin() {
 
 // این فقط برای تست است
 function red() {
-    console.log("test two function in onclick");
+    alert("test two function in onclick");
 }
 
 // تابع برای فراموشی رمز
@@ -187,12 +187,12 @@ function forgotPassword() {
                 if (response.status === 'success') {
                     alert("لینک بازیابی رمز عبور به ایمیل شما ارسال شد.");
                 } else {
-                    console.log(response.message);
+                    alert(response.message);
                 }
             },
             error: function(xhr, status, error) {
 				// توجه کنید که در لوکال هاست اجرا نمیشود و نیاز به یک سرور است تا به کمک php mailer یا smpt ارسال شود
-                console.log("خطا: " + xhr.responseText);
+                alert("خطا: " + xhr.responseText);
             }
         });
     }

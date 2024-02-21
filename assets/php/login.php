@@ -1,7 +1,7 @@
 <?php
 // این اطلاعات متصل شدن به دیتابیس برای لوکال هاست است و برای اجرا در هاست خودتون باید مقادیر رو تغییر بدید
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'form_sign_up');
+define('DB_NAME', 'form_php');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 

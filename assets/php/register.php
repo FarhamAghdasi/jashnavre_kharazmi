@@ -2,7 +2,7 @@
 
 // این اطلاعات متصل شدن به دیتابیس برای لوکال هاست است و برای اجرا در هاست خودتون باید مقادیر رو تغییر بدید
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'form_sign_up');
+define('DB_NAME', 'form_php');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 
@@ -15,7 +15,7 @@ try {
     $lastName = filter_var($_POST['lastName'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['emailId'], FILTER_VALIDATE_EMAIL);
     $phone = filter_var($_POST['contactNumber'], FILTER_SANITIZE_STRING);
-    // البته اینجا پسورد رو رمز نگاری میکنیم تا امنیت وبسایت فراهم بشه و از حملات بروت فورس جلوگیری بشه
+    // البته اینجا پسورد رو رمز نگاری میکنیم تا امنیت وبسایت فراهم بشه 
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
     // اول از همه برسی میکنه که نام کاربری ، شماره موبایل یا ایمیل در دیتابیس وجود دارد یا خیر
